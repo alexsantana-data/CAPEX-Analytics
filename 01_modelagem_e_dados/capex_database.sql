@@ -20,3 +20,15 @@ CREATE TABLE tb_financeiro (
 
     FOREIGN KEY (id_projeto) REFERENCES tb_projetos(id_projeto)
 );
+
+CREATE TABLE tb_controladoria (
+    id_projeto INT NOT NULL PRIMARY KEY,
+    projeto_tipo VARCHAR(50) NOT NULL,
+    projeto_categoria VARCHAR(50) NOT NULL,
+    projeto_prioridade VARCHAR(50) NOT NULL,
+    projeto_impacto VARCHAR(50) NOT NULL,
+    projeto_area VARCHAR(50) NOT NULL,
+    projeto_ciclo VARCHAR(50) NOT NULL,
+
+    FOREIGN KEY (id_projeto) REFERENCES tb_projetos(id_projeto)
+);
