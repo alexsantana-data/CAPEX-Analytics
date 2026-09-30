@@ -53,8 +53,6 @@ VALUES
 -- DADOS DE BASELINE
 -- =============================================
 
-USE db_capex;
-
 INSERT INTO tb_baseline (
     id_projeto,
     periodo,
