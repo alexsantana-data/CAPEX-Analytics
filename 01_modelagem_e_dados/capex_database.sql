@@ -32,3 +32,12 @@ CREATE TABLE tb_controladoria (
 
     FOREIGN KEY (id_projeto) REFERENCES tb_projetos(id_projeto)
 );
+
+CREATE TABLE tb_baseline (
+    id_projeto INT NOT NULL,
+    periodo DATE NOT NULL,
+    valor_baseline DECIMAL(15,2) NOT NULL,
+
+    PRIMARY KEY (id_projeto, periodo),
+    FOREIGN KEY (id_projeto) REFERENCES tb_projetos(id_projeto)
+);
