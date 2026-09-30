@@ -41,3 +41,16 @@ CREATE TABLE tb_baseline (
     PRIMARY KEY (id_projeto, periodo),
     FOREIGN KEY (id_projeto) REFERENCES tb_projetos(id_projeto)
 );
+
+CREATE TABLE tb_movimentos_financeiros (
+    id_movimento INT NOT NULL PRIMARY KEY,
+    id_projeto INT NOT NULL,
+    valor_debito DECIMAL(15,2) NULL,
+    valor_credito DECIMAL(15,2) NULL,
+    tipo_gasto VARCHAR(50) NULL,
+    faturamento_realizado DECIMAL(15,2) NULL,
+    data_movimento DATE NOT NULL,
+    tipo_movimento VARCHAR(50) NOT NULL,
+
+    FOREIGN KEY (id_projeto) REFERENCES tb_projetos(id_projeto)
+);
