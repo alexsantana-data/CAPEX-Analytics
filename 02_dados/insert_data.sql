@@ -139,3 +139,159 @@ VALUES
 (9392, '2026-04-01', 457318.79),
 (9392, '2026-05-01', 731710.06),
 (9392, '2026-06-01', 914637.58);
+
+-- =============================================
+-- DADOS DE MOVIMENTOS FINANCEIROS
+-- =============================================
+
+INSERT INTO tb_movimentos_financeiros (
+    id_movimento,
+    id_projeto,
+    valor_debito,
+    valor_credito,
+    tipo_gasto,
+    faturamento_realizado,
+    data_movimento,
+    tipo_movimento
+)
+VALUES
+
+-- =====================================================
+-- PROJETO 6304 - Modernização da Linha de Envase 02
+-- =====================================================
+(10001, 6304, 185000.00, NULL, 'Máquina', NULL, '2026-01-15', 'Compromisso'),
+(10002, 6304, 72000.00, NULL, 'Material', NULL, '2026-02-10', 'Compromisso'),
+(10003, 6304, 148500.00, NULL, 'Serviço', 148500.00, '2026-02-25', 'Realizado'),
+(10004, 6304, 96500.00, NULL, 'Máquina', 96500.00, '2026-03-18', 'Realizado'),
+(10005, 6304, 42000.00, NULL, 'Transporte', 42000.00, '2026-03-28', 'Realizado'),
+(10006, 6304, 125000.00, NULL, 'Material', NULL, '2026-04-15', 'Compromisso'),
+(10007, 6304, 68000.00, NULL, 'Serviço', 68000.00, '2026-05-08', 'Realizado'),
+(10008, 6304, 35000.00, NULL, 'Mão de obra', 35000.00, '2026-05-22', 'Realizado'),
+(10009, 6304, 15000.00, NULL, 'Transporte', NULL, '2026-06-05', 'Provisão'),
+(10010, 6304, NULL, 18500.00, NULL, NULL, '2026-06-20', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 9330 - Substituição de Compressores
+-- =====================================================
+(10011, 9330, 210000.00, NULL, 'Máquina', NULL, '2026-01-20', 'Compromisso'),
+(10012, 9330, 85000.00, NULL, 'Material', NULL, '2026-02-12', 'Compromisso'),
+(10013, 9330, 132000.00, NULL, 'Máquina', 132000.00, '2026-02-28', 'Realizado'),
+(10014, 9330, 74500.00, NULL, 'Serviço', 74500.00, '2026-03-15', 'Realizado'),
+(10015, 9330, 38000.00, NULL, 'Transporte', 38000.00, '2026-03-29', 'Realizado'),
+(10016, 9330, 95000.00, NULL, 'Máquina', NULL, '2026-04-18', 'Compromisso'),
+(10017, 9330, 62000.00, NULL, 'Serviço', 62000.00, '2026-05-10', 'Realizado'),
+(10018, 9330, 27000.00, NULL, 'Material', 27000.00, '2026-05-25', 'Realizado'),
+(10019, 9330, 18500.00, NULL, 'Transporte', NULL, '2026-06-08', 'Provisão'),
+(10020, 9330, NULL, 12000.00, NULL, NULL, '2026-06-25', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 1138 - Automação do Sistema de Paletização
+-- =====================================================
+(10021, 1138, 95000.00, NULL, 'Máquina', NULL, '2026-01-18', 'Compromisso'),
+(10022, 1138, 42000.00, NULL, 'Material', NULL, '2026-02-08', 'Compromisso'),
+(10023, 1138, 118000.00, NULL, 'Máquina', 118000.00, '2026-02-26', 'Realizado'),
+(10024, 1138, 68000.00, NULL, 'Serviço', 68000.00, '2026-03-12', 'Realizado'),
+(10025, 1138, 22500.00, NULL, 'Transporte', 22500.00, '2026-03-27', 'Realizado'),
+(10026, 1138, 55000.00, NULL, 'Material', NULL, '2026-04-14', 'Compromisso'),
+(10027, 1138, 47000.00, NULL, 'Serviço', 47000.00, '2026-05-06', 'Realizado'),
+(10028, 1138, 18000.00, NULL, 'Mão de obra', 18000.00, '2026-05-20', 'Realizado'),
+(10029, 1138, 9500.00, NULL, 'Transporte', NULL, '2026-06-04', 'Provisão'),
+(10030, 1138, NULL, 7500.00, NULL, NULL, '2026-06-22', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 5340 - Retrofit do Forno de Tratamento Térmico
+-- =====================================================
+(10031, 5340, 275000.00, NULL, 'Máquina', NULL, '2026-01-12', 'Compromisso'),
+(10032, 5340, 110000.00, NULL, 'Material', NULL, '2026-02-15', 'Compromisso'),
+(10033, 5340, 185000.00, NULL, 'Serviço', 185000.00, '2026-02-27', 'Realizado'),
+(10034, 5340, 126000.00, NULL, 'Máquina', 126000.00, '2026-03-20', 'Realizado'),
+(10035, 5340, 52000.00, NULL, 'Transporte', 52000.00, '2026-03-30', 'Realizado'),
+(10036, 5340, 145000.00, NULL, 'Material', NULL, '2026-04-16', 'Compromisso'),
+(10037, 5340, 93000.00, NULL, 'Serviço', 93000.00, '2026-05-12', 'Realizado'),
+(10038, 5340, 41000.00, NULL, 'Mão de obra', 41000.00, '2026-05-28', 'Realizado'),
+(10039, 5340, 22000.00, NULL, 'Transporte', NULL, '2026-06-10', 'Provisão'),
+(10040, 5340, NULL, 25000.00, NULL, NULL, '2026-06-24', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 3536 - Célula Robotizada de Solda
+-- =====================================================
+(10041, 3536, 420000.00, NULL, 'Máquina', NULL, '2026-01-10', 'Compromisso'),
+(10042, 3536, 180000.00, NULL, 'Material', NULL, '2026-02-05', 'Compromisso'),
+(10043, 3536, 315000.00, NULL, 'Máquina', 315000.00, '2026-02-22', 'Realizado'),
+(10044, 3536, 205000.00, NULL, 'Serviço', 205000.00, '2026-03-18', 'Realizado'),
+(10045, 3536, 75000.00, NULL, 'Transporte', 75000.00, '2026-03-31', 'Realizado'),
+(10046, 3536, 260000.00, NULL, 'Máquina', NULL, '2026-04-20', 'Compromisso'),
+(10047, 3536, 145000.00, NULL, 'Serviço', 145000.00, '2026-05-15', 'Realizado'),
+(10048, 3536, 68000.00, NULL, 'Mão de obra', 68000.00, '2026-05-29', 'Realizado'),
+(10049, 3536, 38000.00, NULL, 'Transporte', NULL, '2026-06-12', 'Provisão'),
+(10050, 3536, NULL, 45000.00, NULL, NULL, '2026-06-26', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 4264 - Estação de Tratamento de Efluentes
+-- =====================================================
+(10051, 4264, 350000.00, NULL, 'Máquina', NULL, '2026-01-14', 'Compromisso'),
+(10052, 4264, 145000.00, NULL, 'Material', NULL, '2026-02-10', 'Compromisso'),
+(10053, 4264, 240000.00, NULL, 'Serviço', 240000.00, '2026-02-24', 'Realizado'),
+(10054, 4264, 185000.00, NULL, 'Máquina', 185000.00, '2026-03-17', 'Realizado'),
+(10055, 4264, 82000.00, NULL, 'Transporte', 82000.00, '2026-03-29', 'Realizado'),
+(10056, 4264, 315000.00, NULL, 'Material', NULL, '2026-04-18', 'Compromisso'),
+(10057, 4264, 175000.00, NULL, 'Serviço', 175000.00, '2026-05-11', 'Realizado'),
+(10058, 4264, 85000.00, NULL, 'Mão de obra', 85000.00, '2026-05-26', 'Realizado'),
+(10059, 4264, 42000.00, NULL, 'Transporte', NULL, '2026-06-09', 'Provisão'),
+(10060, 4264, NULL, 55000.00, NULL, NULL, '2026-06-27', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 5314 - Painel Solar para Cobertura do Galpão B
+-- =====================================================
+(10061, 5314, 175000.00, NULL, 'Máquina', NULL, '2026-01-22', 'Compromisso'),
+(10062, 5314, 68000.00, NULL, 'Material', NULL, '2026-02-14', 'Compromisso'),
+(10063, 5314, 125000.00, NULL, 'Máquina', 125000.00, '2026-02-28', 'Realizado'),
+(10064, 5314, 78000.00, NULL, 'Serviço', 78000.00, '2026-03-16', 'Realizado'),
+(10065, 5314, 31000.00, NULL, 'Transporte', 31000.00, '2026-03-30', 'Realizado'),
+(10066, 5314, 115000.00, NULL, 'Material', NULL, '2026-04-19', 'Compromisso'),
+(10067, 5314, 65000.00, NULL, 'Serviço', 65000.00, '2026-05-09', 'Realizado'),
+(10068, 5314, 29000.00, NULL, 'Mão de obra', 29000.00, '2026-05-23', 'Realizado'),
+(10069, 5314, 16000.00, NULL, 'Transporte', NULL, '2026-06-07', 'Provisão'),
+(10070, 5314, NULL, 20000.00, NULL, NULL, '2026-06-21', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 2421 - Upgrade do Sistema de Supervisão MES
+-- =====================================================
+(10071, 2421, 85000.00, NULL, 'Software', NULL, '2026-01-16', 'Compromisso'),
+(10072, 2421, 35000.00, NULL, 'Serviço', NULL, '2026-02-11', 'Compromisso'),
+(10073, 2421, 95000.00, NULL, 'Software', 95000.00, '2026-02-25', 'Realizado'),
+(10074, 2421, 52000.00, NULL, 'Serviço', 52000.00, '2026-03-19', 'Realizado'),
+(10075, 2421, 12000.00, NULL, 'Mão de obra', 12000.00, '2026-03-30', 'Realizado'),
+(10076, 2421, 45000.00, NULL, 'Software', NULL, '2026-04-17', 'Compromisso'),
+(10077, 2421, 38000.00, NULL, 'Serviço', 38000.00, '2026-05-13', 'Realizado'),
+(10078, 2421, 9500.00, NULL, 'Mão de obra', 9500.00, '2026-05-27', 'Realizado'),
+(10079, 2421, 7000.00, NULL, 'Serviço', NULL, '2026-06-06', 'Provisão'),
+(10080, 2421, NULL, 6000.00, NULL, NULL, '2026-06-23', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 4268 - Ampliação do Almoxarifado Automatizado
+-- =====================================================
+(10081, 4268, 195000.00, NULL, 'Máquina', NULL, '2026-01-13', 'Compromisso'),
+(10082, 4268, 85000.00, NULL, 'Material', NULL, '2026-02-09', 'Compromisso'),
+(10083, 4268, 165000.00, NULL, 'Máquina', 165000.00, '2026-02-23', 'Realizado'),
+(10084, 4268, 105000.00, NULL, 'Serviço', 105000.00, '2026-03-14', 'Realizado'),
+(10085, 4268, 42000.00, NULL, 'Transporte', 42000.00, '2026-03-28', 'Realizado'),
+(10086, 4268, 135000.00, NULL, 'Material', NULL, '2026-04-21', 'Compromisso'),
+(10087, 4268, 85000.00, NULL, 'Serviço', 85000.00, '2026-05-14', 'Realizado'),
+(10088, 4268, 38000.00, NULL, 'Mão de obra', 38000.00, '2026-05-30', 'Realizado'),
+(10089, 4268, 21000.00, NULL, 'Transporte', NULL, '2026-06-11', 'Provisão'),
+(10090, 4268, NULL, 28000.00, NULL, NULL, '2026-06-28', 'Estorno'),
+
+-- =====================================================
+-- PROJETO 9392 - Adequação de NR-12 nas Prensas
+-- =====================================================
+(10091, 9392, 105000.00, NULL, 'Máquina', NULL, '2026-01-19', 'Compromisso'),
+(10092, 9392, 45000.00, NULL, 'Material', NULL, '2026-02-13', 'Compromisso'),
+(10093, 9392, 85000.00, NULL, 'Serviço', 85000.00, '2026-02-27', 'Realizado'),
+(10094, 9392, 62000.00, NULL, 'Máquina', 62000.00, '2026-03-21', 'Realizado'),
+(10095, 9392, 18000.00, NULL, 'Transporte', 18000.00, '2026-03-31', 'Realizado'),
+(10096, 9392, 55000.00, NULL, 'Material', NULL, '2026-04-22', 'Compromisso'),
+(10097, 9392, 42000.00, NULL, 'Serviço', 42000.00, '2026-05-16', 'Realizado'),
+(10098, 9392, 15000.00, NULL, 'Mão de obra', 15000.00, '2026-05-31', 'Realizado'),
+(10099, 9392, 8500.00, NULL, 'Transporte', NULL, '2026-06-13', 'Provisão'),
+(10100, 9392, NULL, 10000.00, NULL, NULL, '2026-06-29', 'Estorno');
