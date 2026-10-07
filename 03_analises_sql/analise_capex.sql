@@ -22,3 +22,24 @@ INNER JOIN tb_projetos p
     ON f.id_projeto = p.id_projeto
 
 ORDER BY percentual_execucao DESC;
+-- =====================================================
+-- ANÁLISE 03
+-- Saldo do Budget
+-- Pergunta:
+-- Quanto do orçamento ainda não foi realizado?
+-- =====================================================
+
+SELECT
+    p.nome_projeto,
+    f.id_projeto,
+    f.valor_budget,
+    f.valor_real,
+
+    f.valor_budget - f.valor_real AS saldo_budget
+
+FROM tb_financeiro f
+
+INNER JOIN tb_projetos p
+    ON f.id_projeto = p.id_projeto
+
+ORDER BY saldo_budget DESC;
