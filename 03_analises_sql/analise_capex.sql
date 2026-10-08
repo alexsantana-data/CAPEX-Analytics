@@ -1,3 +1,36 @@
+USE db_capex;
+
+-- =====================================================
+-- CAPEX ANALYTICS
+-- Análises SQL
+-- =====================================================
+
+
+-- =====================================================
+-- ANÁLISE 01
+-- Percentual de execução do CAPEX
+-- Pergunta:
+-- Quanto do orçamento aprovado de cada projeto já foi realizado?
+-- =====================================================
+
+SELECT
+    p.nome_projeto,
+    f.id_projeto,
+    f.valor_budget,
+    f.valor_real,
+
+    CAST(
+        f.valor_real / f.valor_budget * 100
+        AS DECIMAL(10,2)
+    ) AS percentual_execucao
+
+FROM tb_financeiro f
+
+INNER JOIN tb_projetos p
+    ON f.id_projeto = p.id_projeto
+
+ORDER BY percentual_execucao DESC;
+
 -- =====================================================
 -- ANÁLISE 02
 -- Ranking de execução do CAPEX
