@@ -190,3 +190,45 @@ INNER JOIN tb_projetos p
     ON f.id_projeto = p.id_projeto
 
 ORDER BY percentual_exposicao DESC;
+
+
+-- =====================================================
+-- ANÁLISE 07
+-- Valor acima do orçamento
+-- Pergunta:
+-- Quanto cada projeto ultrapassa o orçamento aprovado?
+-- =====================================================
+
+SELECT
+    p.nome_projeto,
+    f.id_projeto,
+    f.valor_budget,
+
+    f.valor_real
+        + f.valor_compromisso
+        + f.valor_provisao AS exposicao_financeira,
+
+    CASE
+        WHEN
+            (
+                f.valor_real
+                + f.valor_compromisso
+                + f.valor_provisao
+                - f.valor_budget
+            ) > 0
+        THEN
+            (
+                f.valor_real
+                + f.valor_compromisso
+                + f.valor_provisao
+                - f.valor_budget
+            )
+        ELSE 0
+    END AS valor_acima_budget
+
+FROM tb_financeiro f
+
+INNER JOIN tb_projetos p
+    ON f.id_projeto = p.id_projeto
+
+ORDER BY valor_acima_budget DESC;
