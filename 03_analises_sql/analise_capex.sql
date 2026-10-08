@@ -71,3 +71,36 @@ INNER JOIN tb_projetos p
     ON f.id_projeto = p.id_projeto
 
 ORDER BY exposicao_financeira DESC;
+
+
+-- =====================================================
+-- ANÁLISE 05
+-- Percentual de Exposição Financeira
+-- Pergunta:
+-- Qual percentual do orçamento está exposto?
+-- =====================================================
+
+SELECT
+    p.nome_projeto,
+    f.id_projeto,
+    f.valor_budget,
+
+    f.valor_real
+        + f.valor_compromisso
+        + f.valor_provisao AS exposicao_financeira,
+
+    CAST(
+        (
+            f.valor_real
+            + f.valor_compromisso
+            + f.valor_provisao
+        ) / NULLIF(f.valor_budget, 0) * 100
+        AS DECIMAL(10,2)
+    ) AS percentual_exposicao
+
+FROM tb_financeiro f
+
+INNER JOIN tb_projetos p
+    ON f.id_projeto = p.id_projeto
+
+ORDER BY percentual_exposicao DESC;
