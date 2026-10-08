@@ -232,3 +232,65 @@ INNER JOIN tb_projetos p
     ON f.id_projeto = p.id_projeto
 
 ORDER BY valor_acima_budget DESC;
+
+
+-- =====================================================
+-- ANÁLISE 08
+-- Identificação de projetos acima do orçamento
+-- Pergunta:
+-- Quais projetos ultrapassaram o orçamento aprovado?
+-- =====================================================
+
+WITH analise_capex AS
+(
+    SELECT
+        p.nome_projeto,
+        f.id_projeto,
+        f.valor_budget,
+        f.valor_real,
+        f.valor_compromisso,
+        f.valor_provisao,
+
+        f.valor_real
+            + f.valor_compromisso
+            + f.valor_provisao AS exposicao_financeira,
+
+        CAST(
+            (
+                f.valor_real
+                + f.valor_compromisso
+                + f.valor_provisao
+            ) / NULLIF(f.valor_budget, 0) * 100
+            AS DECIMAL(10,2)
+        ) AS percentual_exposicao,
+
+        CASE
+            WHEN
+                f.valor_real
+                + f.valor_compromisso
+                + f.valor_provisao
+                > f.valor_budget
+            THEN
+                f.valor_real
+                + f.valor_compromisso
+                + f.valor_provisao
+                - f.valor_budget
+            ELSE 0
+        END AS valor_acima_budget
+
+    FROM tb_financeiro f
+
+    INNER JOIN tb_projetos p
+        ON f.id_projeto = p.id_projeto
+)
+
+SELECT
+    nome_projeto,
+    id_projeto,
+    valor_budget,
+    exposicao_financeira,
+    percentual_exposicao,
+    valor_acima_budget
+FROM analise_capex
+WHERE percentual_exposicao > 100
+ORDER BY percentual_exposicao DESC;
