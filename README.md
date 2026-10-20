@@ -38,6 +38,7 @@ Na base demonstrativa utilizada neste projeto:
 
 O projeto identificado apresentou exposição financeira de **100,36% do orçamento**, indicando a necessidade de acompanhamento gerencial.
 
+
 ## 📈 Dashboard Power BI
 
 O dashboard executivo consolida os principais indicadores financeiros, apresenta barras de progresso para execução e exposição e permite analisar a situação financeira individual dos projetos.
@@ -46,7 +47,9 @@ O dashboard executivo consolida os principais indicadores financeiros, apresenta
 
 ![Dashboard executivo CAPEX](05_imagens/dashboard_capex.png.png)
 
-**Arquivo Power BI:** [`capex_portfolio.pbix`](capex_portfolio.pbix)
+**Arquivo Power BI:** [capex_portfolio.pbix](capex_portfolio.pbix)
+
+
 
 ## 🗂️ Estrutura do Repositório
 
@@ -55,7 +58,8 @@ O dashboard executivo consolida os principais indicadores financeiros, apresenta
 - `03_analises_sql/` — consultas e análises financeiras.
 - `04_kpis/` — definições e regras de cálculo dos indicadores.
 - `05_imagens/` — imagens e capturas do dashboard.
-- `capex_portfolio.pbix` — arquivo do dashboard desenvolvido no Power BI.
+- `capex_portfolio.pbix` — dashboard desenvolvido no Power BI.
+
 
 ## ⚠️ Premissas e Limitações
 
