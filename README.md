@@ -41,7 +41,7 @@ O projeto identificado apresentou exposição financeira de 100,36% do orçament
 
 O dashboard executivo consolida os principais indicadores financeiros, apresenta barras de progresso para execução e exposição e permite analisar a situação financeira individual dos projetos.
 
-Arquivo: CAPEX_Analytics.pbix
+Arquivo: capex_portfolio.pbix
 
 🗂️ Estrutura do Repositório
 
@@ -53,7 +53,7 @@ Arquivo: CAPEX_Analytics.pbix
 
 04_kpis/ — definições e regras de cálculo dos indicadores.
 
-CAPEX_Analytics.pbix — dashboard desenvolvido no Power BI.
+capex_portfolio.pbix — dashboard desenvolvido no Power BI.
 
 ⚠️ Premissas e Limitações
 
