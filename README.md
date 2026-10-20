@@ -44,7 +44,7 @@ O dashboard executivo consolida os principais indicadores financeiros, apresenta
 
 ### Visualização do Dashboard
 
-![Dashboard executivo CAPEX](05_imagens/dashboard_capex.png)
+![Dashboard executivo CAPEX](05_imagens/dashboard_capex.png.png)
 
 **Arquivo Power BI:** [`capex_portfolio.pbix`](capex_portfolio.pbix)
 
